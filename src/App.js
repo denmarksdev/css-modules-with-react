@@ -11,13 +11,23 @@ import styles from './App.module.css';
 import data from "./data/NASA_facts.json";
 
 function App() {
-  const [facts] = useState(data);
+  const [facts, setFacts] = useState(data);
+
+  const onUpdateClicked = (id) => {
+    const copyFacts = [...facts];
+    const indexFact = copyFacts.findIndex((f) => f.id === id);
+    if (indexFact === -1) return;
+
+    // Flip between badge or explore image
+    copyFacts[indexFact].clicked = !copyFacts[indexFact].clicked;
+    setFacts(copyFacts);
+  };
 
   return (
     <div className={styles.App}>
        <Title />
       <Background />
-      <Grid facts={facts} />
+      <Grid facts={facts} onUpdateClicked={onUpdateClicked} />
       <Rocket />
       <Smoke />
     </div>

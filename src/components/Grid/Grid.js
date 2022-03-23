@@ -3,15 +3,12 @@ import GridItem from "./GridItem";
 
 import styles from "./Grid.module.css";
 
-export const Grid = ({ facts }) => {
+export const Grid = ({ facts, onUpdateClicked }) => {
+  const gridItems = facts.map((fact) => (
+    <GridItem key={fact.id} {...fact} onUpdateClicked={onUpdateClicked} />
+  ));
 
-  const gridItems = facts.map((fact) => (<GridItem key={fact.id} {...fact} />));
-
-  return (
-    <section className={styles.grid}>
-      {gridItems}
-    </section>
-  );
+  return <section className={styles.grid}>{gridItems}</section>;
 };
 
 export default Grid;
