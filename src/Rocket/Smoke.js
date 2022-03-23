@@ -9,3 +9,5 @@ export const Smoke = () => (
 );
 
 export default Smoke;
+
+
