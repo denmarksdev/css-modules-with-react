@@ -11,20 +11,20 @@
 
 .stars {
   composes: backgroundItems;
-  background: black url(../../images/stars.png) repeat top center;
+  background: black url(../images/stars.png) repeat top center;
   z-index: -3;
 }
 
 .alpha {
   composes: backgroundItems;
-  background: transparent url(../../images/alpha.png) repeat top center;
+  background: transparent url(../images/alpha.png) repeat top center;
   z-index: -2;
   animation: stargazing 500s linear infinite;
 }
 
 .nebula {
   composes: backgroundItems;
-  background: transparent url(../../images/nebula.png) repeat top center;
+  background: transparent url(../images/nebula.png) repeat top center;
   z-index: -1;
   opacity: 0.15;
 }

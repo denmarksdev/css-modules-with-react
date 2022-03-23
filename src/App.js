@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Title from "./components/Title/Title";
-import Background from "./components/Background/Background";
-import Grid from "./components/Grid/Grid";
-import Rocket from "./components/Rocket/Rocket";
-import Smoke from "./components/Rocket/Smoke";
+import Title from "./Title/Title";
+import Background from "./Background/Background";
+import Grid from "./Grid/Grid";
+import Rocket from "./Rocket/Rocket";
+import Smoke from "./Rocket/Smoke";
 
 import styles from './App.module.css';
 
